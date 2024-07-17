@@ -1,0 +1,108 @@
+.wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-height:100%;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+  .Xbutton {
+    position: absolute;
+    top: 10px; /* 원하는 상단 여백 크기 */
+    right: 10px; /* 원하는 우측 여백 크기 */
+  }
+  .contents {
+    width: 80%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column; /* 이미지와 옵션을 세로로 배치 */
+  align-items: center; /* 이미지와 옵션을 가운데 정렬 */
+  margin-top: 1rem;
+  }
+  .contents img {
+    max-width: 50%; /* 이미지의 최대 너비를 부모 요소에 맞게 조정 */
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+  
+  }
+  .addButton {
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    background-color: var(--color-primary);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-display);
+    
+  }
+
+  .optionWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+  }
+
+  .counter {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .counter > button {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+  }
+
+  .optionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .optionBox {
+    border: 1px solid #ccc; /* 테두리 스타일 및 색상 설정 */
+    border-radius: 5px; /* 테두리의 모서리를 둥글게 만듭니다 */
+    padding: 10px; /* 내부 콘텐츠와 테두리 사이의 여백 설정 */
+  }
+ 
+
+.optionBox.active {
+  background-color: var(--color-primary); /* 선택된 온도일 때의 배경색 */
+}
+.optionBox.active button {
+  color: white; /* 클릭된 버튼의 글자 색을 흰색으로 설정 */
+}
+  .tempButtons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .sizeButtons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .imgBox{
+    align-items: center;
+    text-align: center;
+  }

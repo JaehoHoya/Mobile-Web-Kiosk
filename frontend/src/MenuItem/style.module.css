@@ -1,0 +1,56 @@
+.menuItem {
+  max-width: 18rem; /* 최대 너비 설정 */
+  width: calc(100% - 2rem); /* 최대 너비에서 패딩을 뺀 크기로 설정 */
+  height: calc(18rem - 4rem); /* 최대 높이에서 상하 패딩을 뺀 크기로 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: var(--color-off-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.menuItem:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.menuItem img {
+  max-width: calc(100% - 2rem); /* 이미지의 최대 너비 설정 */
+  max-height: calc(100% - 4rem); /* 이미지의 최대 높이 설정 */
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 80vh; /* 최대 높이 설정 */
+}
+
+/* 모바일 화면에서의 스타일 */
+@media screen and (max-width: 768px) {
+  .menuItem {
+    max-width: 100%; /* 최대 너비를 100%로 설정하여 모바일 화면에 맞춤 */
+    width: calc(50% - 1rem); /* 모바일 화면에서는 2개의 열로 표시 */
+    height: auto; /* 높이 자동 조정 */
+  }
+
+  .menuItem span {
+    font-size: 1rem; /* 기본 폰트 크기 */
+  }
+
+  .menuContainer {
+    max-height: none; /* 최대 높이 제거하여 모바일 화면에서는 모두 표시 */
+  }
+}

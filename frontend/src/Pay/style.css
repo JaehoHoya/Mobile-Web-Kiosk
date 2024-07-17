@@ -1,0 +1,43 @@
+.pay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-height: 80%;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+  }
+  
+  .payment-option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-option img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+  }
+  
+  .payment-option div {
+    margin-top: 10px;
+  }
+  
+
+
+.cancel-button {
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+  }

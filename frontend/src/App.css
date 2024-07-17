@@ -1,0 +1,14 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .App {
+    display: flex;
+    width: 50rem;
+    height: 70rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-primary);
+  }

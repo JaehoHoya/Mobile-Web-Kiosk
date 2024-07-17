@@ -1,0 +1,140 @@
+/* 공통 스타일 */
+.cart {
+  display: flex;
+  height: 400px; /* 카트의 높이를 고정합니다. */
+  border: 2px solid var(--color-primary); /* 카트 테두리를 추가합니다. */
+  overflow: hidden; /* 카트 내부의 오버플로우를 숨깁니다. */
+  position: relative; /* 상대 위치 지정 */
+}
+
+.itembox {
+  flex: 1; /* 왼쪽 아이템 박스 비율을 설정합니다. */
+  overflow-y: auto; /* 세로 스크롤이 필요한 경우만 스크롤 표시됩니다. */
+  max-height: 100%; /* 아이템 박스의 최대 높이를 부모 요소에 맞게 설정합니다. */
+  padding-right: 10px; /* 오른쪽 여백 추가 */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end; /* 오른쪽 정렬로 변경합니다. */
+  position: absolute; /* 절대 위치 지정 */
+  top: 0; /* 위쪽으로 정렬 */
+  right: 0; /* 오른쪽으로 정렬 */
+  height: 100%; /* 카트의 높이와 같게 설정 */
+  width: calc(50% - 10px); /* 버튼 박스의 가로 길이를 카트의 절반으로 설정합니다. */
+  padding-left: 10px; /* 왼쪽 여백 추가 */
+  overflow-x: auto; /* 가로 스크롤이 필요한 경우에만 스크롤 표시됩니다. */
+}
+
+.orderItems {
+  display: flex;
+  flex-wrap: nowrap; /* 아이템이 넘칠 때 한 줄로 유지되도록 설정합니다. */
+  align-items: center;
+  margin-bottom: 1rem; /* 각 상품 아이템 사이의 간격을 설정합니다. */
+  overflow-x: auto; /* 가로 스크롤이 필요한 경우에만 스크롤 표시됩니다. */
+  white-space: nowrap; /* 상품 정보들이 한 줄로 유지되도록 설정합니다. */
+}
+
+.orderItems img {
+  width: 50px;
+  height: auto;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+
+.optionEdit {
+  display: flex;
+  align-items: center;
+}
+
+.optionEdit > button {
+  margin-right: 0.5rem;
+}
+
+.optionEdit > .Option {
+  margin-left: auto;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.allCancelButton {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.orderButton {
+  padding: 1rem 4rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* 모바일 화면에서의 스타일 */
+@media screen and (max-width: 768px) {
+  .cart {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* 모바일 화면에서 카트 높이를 자동으로 조절합니다. */
+  }
+
+  .itembox {
+    flex: 1; /* 모바일 화면에서 아이템박스의 비율을 설정합니다. */
+    max-height: 200px; /* 모바일 화면에서 아이템박스의 최대 높이를 지정합니다. */
+    max-width: calc(50% - 10px); /* 모바일 화면에서 아이템박스의 최대 가로 길이를 카트의 절반으로 설정합니다. */
+    overflow-x: auto; /* 모바일 화면에서 가로 스크롤이 필요한 경우를 대비하여 추가합니다. */
+    white-space: nowrap; /* 모바일 화면에서 아이템들이 한 줄로 유지되도록 설정합니다. */
+  }
+
+  .buttons {
+    align-items: flex-end; /* 오른쪽 정렬로 변경합니다. */
+    max-width: 50%; /* 버튼 박스의 최대 가로 길이를 카트의 절반으로 설정합니다. */
+    height: auto; /* 모바일 화면에서 버튼 박스의 높이를 자동으로 조절합니다. */
+  }
+
+  .orderItems {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .orderItems img {
+    width: 20px;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .optionEdit > button {
+    margin-right: 0.25rem;
+  }
+
+  .allCancelButton {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .orderButton {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .detail {
+    font-size: 0.75rem;
+  }
+}

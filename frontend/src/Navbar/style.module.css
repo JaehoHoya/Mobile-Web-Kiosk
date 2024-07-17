@@ -1,0 +1,59 @@
+.CategoryWrapper{
+  
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.CategoryTitle{
+  font-size: 50px;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 844px) {
+  .CategoryTitle {
+    font-size: 30px;
+  }
+}
+.categoryNavbar {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  overflow-x: scroll;
+  border-bottom: 2px solid var(--color-primary);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  z-index: 1;
+}
+
+.categoryNavbar::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryButton {
+  background-color: #fff;
+  color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  padding: 1.5rem;
+  cursor: pointer;
+  width: 30%;
+  height: 100%;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-display);
+  line-height: auto;
+  flex: 0 0 auto;
+}
+
+.active {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+@media screen and (max-width: 844px) {
+  .categoryButton {
+    font-size: 16px; /* 폰트 크기 조정 */
+  }
+}

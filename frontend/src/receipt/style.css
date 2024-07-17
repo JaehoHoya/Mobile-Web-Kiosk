@@ -1,0 +1,27 @@
+.receipt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-height: 80%; /* 최대 높이 설정 */
+    height: 500px; /* 높이 설정 */
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    z-index: 1000;
+    padding: 20px;
+    position: relative; /* 상대 위치로 변경 */
+}
+
+.receipt-image-container {
+    position: absolute;
+    bottom: 20px; /* 이미지를 아래로 20px 이동 */
+    left: 50%;
+    transform: translateX(-50%);
+}
