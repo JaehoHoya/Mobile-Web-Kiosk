@@ -72,7 +72,7 @@ const calculateTotalPrice = () => {
     // 카트 목록을 빈 배열로 업데이트하여 전체 상품 취소
     useCartStore.setState({ cartList: [] });
   };
-// 담긴 상품이 없으면 장바구니 랜더링 x
+// 담긴 상품이 없으면 장바구니 랜더링 x//
   if(!cartList.length) {
        return(
         <></>
